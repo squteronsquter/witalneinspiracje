@@ -9,8 +9,6 @@ collections:
 label: 'Blog'
 folder: 'content/blog'
 slug: 'index'
-media_folder: ''
-public_folder: ''
 path: '{{title}}/index'
 editor:
   preview: false
