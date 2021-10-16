@@ -1,23 +1,22 @@
 backend:
-  - name: test-repo
-  + name: github
-  + repo: squteronsquter/witalneinspiracje
+- name: test-repo
++ name: github
++ repo: squteronsquter/witalneinspiracje
 media_folder: static/img
 public_folder: /img
-
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    slug: 'index'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    editor:
-      preview: false
-    fields:
-      - { name: path, label: Path }
-      - { name: date, label: PublishDate, widget: datetime }
-      - { name: title, label: Title }
-      - { name: description, label: Description, widget: string }
-      - { name: body, label: Body, widget: markdown }
+- name: 'blog'
+label: 'Blog'
+folder: 'content/blog'
+slug: 'index'
+media_folder: ''
+public_folder: ''
+path: '{{title}}/index'
+editor:
+  preview: false
+fields:
+  - { name: path, label: Path }
+  - { name: date, label: PublishDate, widget: datetime }
+    - { name: title, label: Title }
+    - { name: description, label: Description, widget: string }
+    - { name: body, label: Body, widget: markdown }
