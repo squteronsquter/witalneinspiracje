@@ -1,35 +1,23 @@
 backend:
   - name: test-repo
   + name: github
-  + repo: squter/wi
+  + repo: squteronsquter/witalneinspiracje
+media_folder: static/img
+public_folder: /img
 
-# backend:
-#   name: test-repo
-
-# media_folder: static/assets
-# public_folder: /assets
-
-# collections:
-#   - name: blog
-#     label: Blog
-#     folder: blog
-#     create: true
-#     fields:
-#       - { name: path, label: Path }
-#       - { name: date, label: Date, widget: datetime }
-#       - { name: title, label: Title }
-#       - { name: body, label: Body, widget: markdown }
-
-
-# backend:
-#   name: github
-#   repo: your-username/your-repo-name
-#   branch: your-main-branch
-
-# echo "# witalneinspiracje" >> README.md
-# git init
-# git add README.md
-# git commit -m "first commit"
-# git branch -M main
-# git remote add origin https://github.com/squteronsquter/witalneinspiracje.git
-# git push -u origin main
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: PublishDate, widget: datetime }
+      - { name: title, label: Title }
+      - { name: description, label: Description, widget: string }
+      - { name: body, label: Body, widget: markdown }
